@@ -1,72 +1,145 @@
-markdown
-# 🧰 Installation Guide — Cyber Security Guard Defense Stack
-This guide provides step-by-step instructions to install and configure the full defense stack, including all four modules and automation via N8N.
-## 📦 Prerequisites
-Operating System: Linux (Ubuntu recommended), Windows Server, or Docker-compatible environment  
-Development Tools: Python 3.10+ (for CG and Link.CSG), Rust (for CSG core), Node.js 18+ (for N8N and VPN.CSG)  
-Docker & Docker Compose (recommended for modular deployment)  
-GitHub CLI (optional for cloning repositories)
-## Installation Steps
-### Step 1: Clone the Repositories
-Use GitHub CLI or manual cloning to download all required modules:
+````markdown
+# 🧰 دليل التثبيت — نظام Cyber Security Guard Defense Stack
+
+يوضح هذا الدليل خطوات تثبيت وتكوين النظام الدفاعي الكامل، بما في ذلك الوحدات الأربع ونظام الأتمتة عبر N8N.
+
+---
+
+## 📦 المتطلبات المسبقة
+- نظام التشغيل: Linux (يوصى باستخدام Ubuntu)، أو Windows Server، أو أي بيئة تدعم Docker  
+- أدوات التطوير:
+  - Python 3.10 أو أحدث (مطلوب لوحدتي CG و Link.CSG)
+  - Rust (مطلوب للوحدة الأساسية CSG Core)
+  - Node.js 18 أو أحدث (مطلوب لوحدتي N8N و VPN.CSG)
+- Docker و Docker Compose (موصى بهما للنشر المعياري)
+- GitHub CLI (اختياري لاستنساخ المستودعات)
+
+---
+
+## ⚙️ الخطوة 1: استنساخ المستودعات
+افتح الطرفية ونفّذ الأوامر التالية لاستنساخ جميع المستودعات المطلوبة:
+
 ```bash
 gh repo clone Alasarmamhd/Cyber-Security-Guard-Defense-Stack
 gh repo clone Alasarmamhd/cyber-guard-pro
 gh repo clone Alasarmamhd/cyber-security-guard-pro
 gh repo clone Alasarmamhd/VPN-GUARD.-SCG-
 gh repo clone Alasarmamhd/linkgarde.csg
-Step 2: Install N8N (Automation Engine)
-You can install N8N using Docker or locally via Node.js.. Option A: Docker (Recommended)
+````
 
-bash
+---
+
+## 🧩 الخطوة 2: تثبيت N8N (محرك الأتمتة)
+
+يمكنك تثبيت N8N بطريقتين: عبر Docker (مستحسن) أو محليًا باستخدام Node.js.
+
+### الخيار A — باستخدام Docker (موصى به)
+
+```bash
 docker run -it --rm \
   -p 5678:5678 \
   -v ~/.n8n:/home/node/.n8n \
   n8nio/n8n
-Option B: Local Installation
+```
 
-bash
+### الخيار B — التثبيت المحلي
+
+```bash
 npm install n8n -g
 n8n start
-Step 3: Configure Each Module
-CSG (Core AI-XDR)
+```
 
-bash
+---
+
+## 🔧 الخطوة 3: تهيئة كل وحدة
+
+### 1. CSG (الوحدة الأساسية — Core AI-XDR)
+
+```bash
 cd cyber-security-guard-pro
-# Build using Rust or run precompiled binary
-# Ensure API service is running on port 5050
-CG (AI-SOC & Threat Intelligence)
+# قم بالبناء باستخدام Rust أو شغّل الملف التنفيذي الجاهز مسبقًا
+# تأكد من أن خدمة API تعمل على المنفذ 5050
+```
 
-bash
+### 2. CG (التحليل الذكي والذكاء التهديدي — AI-SOC & Threat Intelligence)
+
+```bash
 cd cyber-guard-pro
 pip install -r requirements.txt
 python main.py
-VPN.CSG (Decentralized VPN)
+```
 
-bash
+### 3. VPN.CSG (شبكة VPN اللامركزية)
+
+```bash
 cd VPN-GUARD.-SCG-
 npm install
 node vpn.js
-Link.CSG (Pre-entry Validation)
+```
 
-bash
+### 4. Link.CSG (التحقق قبل الدخول — Pre-entry Validation)
+
+```bash
 cd linkgarde.csg
 pip install -r requirements.txt
 python linkguard.py
-Step 4: Connect Modules via N8N
-Use N8N workflows to automate:
+```
 
-Incident response triggers from CSG
+---
 
-Threat correlation via CG
+## 🔗 الخطوة 4: ربط الوحدات عبر N8N
 
-Link scanning via Link.CSG
+استخدم N8N لتنسيق العمليات بين جميع الوحدات. يمكن إعداد سير عمل (Workflows) للقيام بما يلي:
 
-VPN routing updates via VPN.CSG Refer to the visual diagrams in docs/ar/ and docs/en/ for workflow examples.
+* تشغيل استجابة تلقائية للحوادث من وحدة CSG
+* تحليل وربط التهديدات من وحدة CG
+* فحص الروابط والتحقق منها عبر Link.CSG
+* تحديث إعدادات VPN من خلال وحدة VPN.CSG
 
-Final Check
-All modules should expose their APIs and respond to health checks
+راجع الرسومات التوضيحية في المجلدين `docs/ar/` و `docs/en/` للاطلاع على أمثلة جاهزة لسير العمل.
 
-N8N should be able to trigger and coordinate actions across modules
+---
 
-Logs and alerts should be visible in terminal or dashboard (if configured) For advanced deployment (TLS, Docker Compose, monitoring), refer to future updates in the Wiki or GitHub Pages.
+## ✅ التحقق النهائي من التشغيل
+
+تأكد من النقاط التالية بعد التثبيت:
+
+* كل وحدة تُظهر واجهة API وتستجيب لاختبارات الصحة (Health Check).
+* N8N قادر على تشغيل المشغلات والتنسيق بين الوحدات.
+* السجلات (Logs) والتنبيهات تظهر في الطرفية أو في لوحة التحكم (Dashboard) إن وُجدت.
+
+---
+
+## 🛠️ إعدادات النشر المتقدم
+
+للتشغيل في بيئة إنتاج أو بيئة متقدمة، يُوصى بما يلي:
+
+* تفعيل بروتوكول HTTPS عبر شهادات TLS / SSL
+* نشر النظام باستخدام Docker Compose أو Kubernetes
+* مراقبة الأداء والسجلات باستخدام ELK أو Prometheus وGrafana
+* تفعيل نظام الصلاحيات (RBAC) وسجلات التدقيق (Audit Logs)
+* إنشاء نسخ احتياطية وخطط استعادة عند الكوارث
+
+يمكن الاطلاع على إعدادات متقدمة إضافية (مثل ملفات `.env` و `docker-compose.yml`) من خلال Wiki المشروع أو صفحات GitHub الخاصة به.
+
+---
+
+## 📂 الهيكل المقترح للمجلدات
+
+```
+.
+├── cyber-security-guard-pro/     # الوحدة الأساسية CSG
+├── cyber-guard-pro/              # وحدة CG (ذكاء التهديدات)
+├── linkgarde.csg/                # وحدة Link.CSG (التحقق من الروابط)
+├── VPN-GUARD.-SCG-/              # وحدة VPN.CSG (الشبكة اللامركزية)
+├── n8n-workflows/                # ملفات سير العمل الخاصة بـ N8N
+├── docs/
+│   ├── en/
+│   └── ar/
+└── README.md                     # ملف التثبيت هذا
+```
+
+---
+
+```
+```
