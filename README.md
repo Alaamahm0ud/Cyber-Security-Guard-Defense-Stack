@@ -16,48 +16,49 @@ Designed for ethical security research and defensive operations, fully automated
 
 📚 Table of Contents
 
-System Overview
-
-Architecture Summary
-
-Component Breakdown
-
-System Requirements
-
-Automation Scenarios
-
-Visual Assets
-
-License & Ethical Use
-
-Developer Info
-
-Project Repositories
-
 🔐 System Overview
-
-The Cyber Security Guard Defense Stack is composed of four tightly integrated modules, designed to provide adaptive monitoring, proactive defense, and seamless automation.
-
-🔒 CSG — Core AI-XDR engine for adaptive monitoring and incident response
-
-🧩 CG — AI-SOC and threat intelligence module for event correlation
-
-🌐 VPN.CSG — Decentralized VPN layer for privacy and secure routing
-
-🔗 Link.CSG — Pre-entry validation gateway for URL and file scanning
-
-All modules communicate securely through APIs and can be automated via N8N
-.
 
 🏛️ Architecture Summary
 
-The stack follows a triangular security topology, with CSG at the center orchestrating intelligence between CG, VPN.CSG, and Link.CSG.
+⚙️ Component Breakdown
 
-Each module operates independently but contributes to a unified defense grid powered by AI models trained for:
+🧰 System Requirements
 
-Behavioral anomaly detection
+🚀 Automation Scenarios
 
-Threat intelligence enhancement
+🖼️ Visual Assets
+
+📄 License & Ethical Use
+
+👤 Developer Info
+
+🔗 Project Repositories
+
+🔐 System Overview
+
+The Cyber Security Guard Defense Stack consists of four integrated modules designed to deliver adaptive monitoring, proactive defense, and automation efficiency.
+
+🔒 CSG — Core AI-XDR engine for real-time detection and incident response
+
+🧩 CG — AI-SOC and threat intelligence for behavioral and correlation analysis
+
+🌐 VPN.CSG — Decentralized VPN for anonymity and secure routing
+
+🔗 Link.CSG — Validation gateway for scanning URLs and files before access
+
+All modules communicate securely via APIs and integrate seamlessly with N8N
+ for workflow automation.
+
+🏛️ Architecture Summary
+
+The stack forms a triangular defense topology:
+CSG acts as the control center, linking with CG, VPN.CSG, and Link.CSG.
+
+Each module contributes specialized AI-driven capabilities, including:
+
+Behavioral anomaly analysis
+
+Threat correlation and augmentation
 
 Obfuscation and encryption
 
@@ -66,59 +67,51 @@ IP rotation and stealth routing
 ⚙️ Component Breakdown
 🔒 Cyber Security Guard (CSG)
 
-AI-XDR core responsible for adaptive protection and system-level detection.
-
 Continuous real-time monitoring
 
-Automated patching and response
+AI-based anomaly detection
 
-Malware and ransomware detection
+Proactive vulnerability patching
+
+Malware and ransomware defense
 
 Micro-segmentation and isolation
 
 🧠 Cyber Guard (CG)
 
-AI-SOC and correlation engine.
+Real-time event correlation
 
-Real-time event analysis
+Multi-layer AI analytics
 
-Threat correlation and enrichment
+Threat intelligence enrichment
 
-Machine learning–driven detection models
-
-Compliance and alert automation
+Compliance and detection enhancement
 
 🌐 VPN Guard (VPN.CSG)
 
-Privacy-focused decentralized VPN.
+Advanced encryption (WireGuard, IPsec)
 
-WireGuard/IPsec encryption
+Anonymous routing and IP rotation
 
-Intelligent IP rotation
+Multi-hop secure tunneling
 
-Multi-hop routing and stealth mode
-
-Decentralized node authentication
+Decentralized authentication nodes
 
 🔗 Link Guard (Link.CSG)
 
-Pre-entry validation layer for secure access.
+URL and file quarantine scanning
 
-URL and file quarantine gateway
+Metadata verification
 
-Metadata and hash verification
+Deep AI content analysis
 
-Deep AI-powered scanning
-
-Threat blocking before access
+Threat isolation before user access
 
 🧰 System Requirements
 
-Operating System: Linux (Ubuntu preferred), Windows Server, or Docker environment
-
+Operating Systems: Linux (Ubuntu preferred), Windows Server, Docker
 Automation Engine: N8N (Docker recommended)
-
-Languages & Frameworks:
+Programming Environments:
 
 Python (CG, Link.CSG)
 
@@ -127,20 +120,20 @@ Rust (CSG Core)
 Node.js (VPN.CSG, N8N)
 
 🚀 Automation Scenarios (via N8N)
-Scenario 1 — Internal Incident Response
+Scenario 1 – Internal Incident Response
 
-Trigger: CSG detects system anomaly
-Action: Isolate endpoint → CG correlates threat → Notify admin via N8N
+Trigger: CSG detects abnormal system behavior
+Action: Isolate endpoint → Correlate via CG → Report via N8N
 
-Scenario 2 — Malicious Link Interception
+Scenario 2 – Malicious Link Interception
 
-Trigger: User request passes through gateway
-Action: Link.CSG scans URL → If malicious → Block + report to CSG
+Trigger: URL or file passes through gateway
+Action: Link.CSG scans → Block if malicious → Notify CSG
 
-Scenario 3 — Zero-Day Vulnerability Defense
+Scenario 3 – Zero-Day Patch Deployment
 
-Trigger: CG detects new global threat
-Action: N8N instructs CSG to auto-patch affected environments
+Trigger: CG identifies new global threat
+Action: N8N coordinates patch rollout through CSG
 
 🖼️ Visual Assets
 Arabic Diagrams
@@ -161,8 +154,8 @@ English Diagrams
 
 📄 License & Ethical Use
 
-This platform is designed solely for ethical cybersecurity research and defensive operations.
-Any unauthorized, malicious, or offensive use is strictly prohibited.
+This platform is built exclusively for ethical cybersecurity research and defensive applications.
+Unauthorized testing or offensive actions are strictly prohibited.
 
 License: Apache-2.0
 
@@ -190,4 +183,4 @@ Independent Cybersecurity Tools Developer
 
 🔹 Cyber Security Guard Defense Stack
 
-🧭 Built as a complete AI-driven defensive ecosystem — empowering researchers, analysts, and engineers to shape the next era of ethical cybersecurity.
+🧭 Built as a complete AI-driven defense ecosystem to empower ethical researchers, analysts, and engineers in the evolving landscape of cybersecurity.
