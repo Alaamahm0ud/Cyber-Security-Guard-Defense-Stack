@@ -129,7 +129,7 @@ Action: N8N coordinates patch rollout through CSG
 Primary diagrams for current release:
 
 <div align="center">
-  <img src="docs/dokar.jpg" alt="Main Architecture" width="900"/>
+  <img src="docs/dokar2.jpg" alt="Main Architecture" width="900"/>
 </div>
 
 English diagrams (kept available for reference):
