@@ -63,7 +63,7 @@ Capabilities include:
 - IP rotation and stealth routing
 
 <div align="center">
-  <img src="docs/dokar1.jpg" alt="English Architecture Diagram" width="850"/>
+  <img src="docs/dokar01.jpg" alt="English Architecture Diagram" width="850"/>
 </div>
 
 ---
