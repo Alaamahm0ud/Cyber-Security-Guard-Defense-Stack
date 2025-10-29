@@ -3,7 +3,7 @@
 🌍 Available Languages: [English](README.md) | [العربية](README.ar.md)
 
 <div align="center">
-  <img src="docs/dokar.jpg" alt="CSG Architecture" width="900"/>
+  <img src="docs/dokar.0.jpg" alt="CSG Architecture" width="900"/>
 </div>
 
 A multi-layered cybersecurity ecosystem integrating AI-driven threat detection, decentralized VPN anonymity, and intelligent link validation.
