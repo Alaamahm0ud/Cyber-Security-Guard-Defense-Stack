@@ -158,7 +158,7 @@ Alaa Mahmoud Mohamed
 
 للتواصل:
 - البريد الأساسي للمشروع: csg4team@proton.me  
-- بريد المشروع/الاحترافي: alaamahmoudmohamed89@gmail.com  
+- بريد المشروع: alaamahmoudmohamed89@gmail.com  
 - البريد الشخصي: alaat9080@gmail.com  
 - LinkedIn: https://www.linkedin.com/in/alaa-mahmoud-mohamed-918aba378  
 - GitHub: https://github.com/alaat9080-svg/cyber-security-guard-pro  
@@ -180,5 +180,5 @@ Alaa Mahmoud Mohamed
 
 ---
 
-تم إعداد هذه النسخة لتكون جاهزة للرفع مباشرة.  
+ 
 </div>
